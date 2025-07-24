@@ -497,9 +497,6 @@ html, body {
     border-style: none;
     cursor: pointer;
 }
-@media{
-    width:100%;
-}
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {
     #page2 {
