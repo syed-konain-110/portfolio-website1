@@ -1382,3 +1382,200 @@ footer a i{
         grid-template-columns: 1fr;
     }
 }
+/* Additional Responsive Styles */
+@media (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+    
+    .container1 {
+        margin-left: -25%;
+    }
+    
+    .container11 {
+        margin-left: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+    
+    .main-container .content {
+        width: 80%;
+        margin-left: 0;
+    }
+    
+    .main-container .image {
+        margin-top: 50px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .t4, .tt1, .tt2 {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .container1 {
+        margin-left: 0;
+        width: 100%;
+        padding: 50px 20px;
+    }
+    
+    .container11 {
+        margin-left: 0;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    
+    .portfolio-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .port-box {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --big-font: 2rem;
+        --normal-font: 1.5rem;
+        --h2-font: 2.2rem;
+    }
+    
+    .main-container .image {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .content button {
+        width: 70%;
+    }
+    
+    .technical-bars .progress-line {
+        width: 300px;
+    }
+    
+    .bar, .sp1, .heading1 {
+        margin-left: 0;
+    }
+    
+    .sub-title {
+        margin-left: 0;
+    }
+    
+    .services-box {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --big-font: 1.8rem;
+        --normal-font: 1.2rem;
+        --h2-font: 2rem;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .main-container .image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .content button {
+        width: 90%;
+        font-size: 1rem;
+    }
+    
+    .social-links i {
+        width: 25px;
+        height: 25px;
+        font-size: 1.5rem;
+    }
+    
+    .technical-bars .progress-line {
+        width: 250px;
+    }
+    
+    .container11 .card {
+        width: 100px;
+        height: 120px;
+    }
+    
+    .container11 .card .percent,
+    .container11 .card .percent svg {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .fillter-button .bt1 {
+        margin-left: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .contant form {
+        padding: 0 20px;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer p {
+        margin-bottom: 10px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 400px) {
+    .main-container .image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .typewriter {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    
+    .technical-bars .progress-line {
+        width: 200px;
+    }
+    
+    .container11 {
+        gap: 20px;
+    }
+    
+    .container11 .card {
+        width: 80px;
+        height: 100px;
+    }
+    
+    .container11 .card .percent,
+    .container11 .card .percent svg {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .services-box {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .service-icon {
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+}
