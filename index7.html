@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Soda Effect</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
     <link rel="stylesheet" href="style7.css">
 </head>
 <body>
     <header>
         <div class="left">
             <h1>CSS ONLY</h1>
-            <img src="2.png" alt="">
+            <img src="2.png" alt="CSS Logo">
         </div>
         <div class="author">
             <h3>SYED</h3>
-            <div >
+            <div>
                 <p>Design By</p>
                 <p>MUHAMMAD TAQI</p>
             </div>
@@ -22,24 +23,113 @@
                 <p>Code By</p>
                 <p>TAQI</p>
             </div>
-            <img src="code.png" alt="">
+            <img src="code.png" alt="Code Icon" class="code-icon">
         </div>
     </header>
     <div class="banner">
         <div class="product">
-            <div class="soda" style="--url: url(bgg.png)">
-            </div>
-            <div class="soda" style="--url: url(bg2.png)">
-            </div>
+            <div class="soda" style="--url: url(bgg.png)"></div>
+            <div class="soda" style="--url: url(bg2.png)"></div>
         </div>
 
-
         <div class="rock">
-            <img src="rock1.png" alt="">
-            <img src="rock2.png" alt="">
-            <img src="rock3.png" alt="">
+            <img src="rock1.png" alt="Rock 1" class="rock-bottom">
+            <img src="rock2.png" alt="Rock 2" class="rock-left">
+            <img src="rock3.png" alt="Rock 3" class="rock-right">
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const product = document.querySelector('.product');
+            const sodas = document.querySelectorAll('.soda');
+            const rocks = {
+                bottom: document.querySelector('.rock-bottom'),
+                left: document.querySelector('.rock-left'),
+                right: document.querySelector('.rock-right')
+            };
+            
+            // Touch and mouse interaction for the product
+            let isHovering = false;
+            
+            // For desktop hover
+            product.addEventListener('mouseenter', activateEffect);
+            product.addEventListener('mouseleave', deactivateEffect);
+            
+            // For touch devices
+            product.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                if (isHovering) {
+                    deactivateEffect();
+                } else {
+                    activateEffect();
+                }
+                isHovering = !isHovering;
+            });
+            
+            function activateEffect() {
+                product.classList.add('active');
+                document.querySelector('.banner').classList.add('product-active');
+            }
+            
+            function deactivateEffect() {
+                product.classList.remove('active');
+                document.querySelector('.banner').classList.remove('product-active');
+            }
+            
+            // Responsive adjustments
+            function handleResize() {
+                const header = document.querySelector('header');
+                const banner = document.querySelector('.banner');
+                const productWidth = window.innerWidth < 768 ? '80%' : '500px';
+                
+                // Adjust header layout for mobile
+                if (window.innerWidth < 768) {
+                    document.querySelector('.code-icon').style.display = 'none';
+                    document.querySelector('.author').style.width = '100%';
+                } else {
+                    document.querySelector('.code-icon').style.display = '';
+                    document.querySelector('.author').style.width = '';
+                }
+                
+                // Adjust product size
+                document.querySelector('.product').style.width = productWidth;
+                
+                // Adjust soda size
+                const sodaWidth = window.innerWidth < 768 ? '70%' : '280px';
+                document.querySelectorAll('.soda').forEach(soda => {
+                    soda.style.width = sodaWidth;
+                });
+                
+                // Adjust banner height for mobile
+                if (window.innerWidth < 1024) {
+                    banner.style.height = '80vh';
+                } else {
+                    banner.style.height = '100vh';
+                }
+            }
+            
+            // Initialize and add resize listener
+            handleResize();
+            window.addEventListener('resize', handleResize);
+            
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('header, .product').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
