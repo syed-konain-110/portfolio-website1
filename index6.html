@@ -71,5 +71,124 @@
         </div>
     </div>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const pauseBtn = document.querySelector('.pause-btn');
+            const speedUpBtn = document.querySelector('.speed-up-btn');
+            const speedDownBtn = document.querySelector('.speed-down-btn');
+            let animationSpeed = 20;
+            let isPaused = false;
+            let animationId;
+            
+            // Initialize animation
+            function updateAnimation() {
+                slider.style.animation = `autoRun ${animationSpeed}s linear infinite`;
+            }
+            
+            // Handle pause/play
+            pauseBtn.addEventListener('click', function() {
+                if (isPaused) {
+                    slider.style.animationPlayState = 'running';
+                    pauseBtn.textContent = '⏸';
+                } else {
+                    slider.style.animationPlayState = 'paused';
+                    pauseBtn.textContent = '▶';
+                }
+                isPaused = !isPaused;
+            });
+            
+            // Handle speed controls
+            speedUpBtn.addEventListener('click', function() {
+                if (animationSpeed > 5) {
+                    animationSpeed -= 5;
+                    updateAnimation();
+                }
+            });
+            
+            speedDownBtn.addEventListener('click', function() {
+                if (animationSpeed < 60) {
+                    animationSpeed += 5;
+                    updateAnimation();
+                }
+            });
+            
+            // Handle touch/mouse events for manual rotation
+            let isDragging = false;
+            let startX, currentX;
+            let currentRotation = 0;
+            
+            slider.addEventListener('mousedown', startDrag);
+            slider.addEventListener('touchstart', startDrag);
+            
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag);
+            
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+            
+            function startDrag(e) {
+                isDragging = true;
+                startX = e.clientX || e.touches[0].clientX;
+                currentRotation = getCurrentRotation();
+                slider.style.animationPlayState = 'paused';
+                pauseBtn.textContent = '▶';
+                isPaused = true;
+                e.preventDefault();
+            }
+            
+            function drag(e) {
+                if (!isDragging) return;
+                currentX = e.clientX || e.touches[0].clientX;
+                const deltaX = currentX - startX;
+                const rotation = currentRotation + deltaX / 5;
+                slider.style.transform = `perspective(1000px) rotateX(-16deg) rotateY(${rotation}deg)`;
+                e.preventDefault();
+            }
+            
+            function endDrag() {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                // Resume animation or keep it paused based on pause state
+                if (!isPaused) {
+                    slider.style.animationPlayState = 'running';
+                }
+            }
+            
+            function getCurrentRotation() {
+                const transform = window.getComputedStyle(slider).getPropertyValue('transform');
+                if (transform === 'none') return 0;
+                
+                const values = transform.split('(')[1].split(')')[0].split(',');
+                const a = values[0];
+                const b = values[1];
+                const angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+                return angle < 0 ? angle + 360 : angle;
+            }
+            
+            // Responsive adjustments
+            function handleResize() {
+                const content = document.querySelector('.content');
+                const banner = document.querySelector('.banner');
+                
+                if (window.innerWidth < 768) {
+                    content.style.paddingBottom = '50px';
+                    banner.style.height = 'auto';
+                    banner.style.minHeight = '100vh';
+                } else {
+                    content.style.paddingBottom = '100px';
+                    banner.style.height = '100vh';
+                }
+            }
+            
+            window.addEventListener('resize', handleResize);
+            handleResize();
+            
+            // Initialize animation
+            updateAnimation();
+        });
+    </script>
+    
 </body>
 </html>
