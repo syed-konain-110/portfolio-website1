@@ -1247,142 +1247,7 @@ footer a i{
 .typewriter{
     width: 700px;
 }
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .home-content h1 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .navbar {
-        padding: 20px;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
-        background-color: var(--dark-color);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: var(--transition);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .social-icons {
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active .line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .home-content {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .text-content {
-        max-width: 100%;
-        margin-top: 50px;
-    }
-
-    .cta-buttons {
-        justify-content: center;
-    }
-
-    .about-container {
-        flex-direction: column;
-    }
-
-    .about-image {
-        margin-bottom: 50px;
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    .home-section {
-        padding: 120px 20px 80px;
-    }
-
-    .text-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .text-content h3 {
-        font-size: 1.5rem;
-    }
-
-    .profile-image {
-        width: 300px;
-        height: 300px;
-    }
-
-    .image-border {
-        width: 320px;
-        height: 320px;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .btn-outline {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 576px) {
-    .skills-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .services-container {
-        grid-template-columns: 1fr;
-    }
-
-    .about-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-}
-/* Additional Responsive Styles */
+/* Responsive Breakpoints */
 @media (max-width: 1200px) {
     .main-container {
         width: 90%;
@@ -1395,22 +1260,36 @@ footer a i{
     .container11 {
         margin-left: 40%;
     }
+    
+    .portfolio-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 992px) {
+    :root {
+        --big-font: 2rem;
+        --normal-font: 1.5rem;
+        --h2-font: 2.2rem;
+    }
+    
     .main-container {
         flex-direction: column;
         text-align: center;
         margin-top: 100px;
+        height: auto;
     }
     
     .main-container .content {
         width: 80%;
         margin-left: 0;
+        margin-top: 30px;
     }
     
     .main-container .image {
         margin-top: 50px;
+        width: 350px;
+        height: 350px;
     }
     
     .about-content {
@@ -1420,6 +1299,14 @@ footer a i{
     .t4, .tt1, .tt2 {
         margin-left: 0;
         text-align: center;
+    }
+    
+    .tt1 {
+        margin-top: 20px;
+    }
+    
+    .tt2 {
+        margin-top: 10px;
     }
     
     .container1 {
@@ -1441,14 +1328,38 @@ footer a i{
     .port-box {
         margin-left: 0;
         margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .sub-title {
+        margin-left: 0;
+    }
+    
+    .technical-bars .progress-line {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .bar, .sp1, .heading1 {
+        margin-left: 0;
+    }
+    
+    .services-box {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --big-font: 2rem;
-        --normal-font: 1.5rem;
-        --h2-font: 2.2rem;
+        --big-font: 1.8rem;
+        --normal-font: 1.2rem;
+        --h2-font: 2rem;
+    }
+    
+    .logo {
+        font-size: 1.8rem;
     }
     
     .main-container .image {
@@ -1461,32 +1372,36 @@ footer a i{
     }
     
     .technical-bars .progress-line {
-        width: 300px;
+        width: 100%;
     }
     
-    .bar, .sp1, .heading1 {
-        margin-left: 0;
+    .info-about1, .info-about2, .info-about3 {
+        display: none;
     }
     
-    .sub-title {
-        margin-left: 0;
+    .about .img-about img {
+        max-width: 300px;
+    }
+    
+    .section-services {
+        flex-direction: column;
     }
     
     .services-box {
-        margin-left: 20px;
-        margin-right: 20px;
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    .contant form {
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 576px) {
     :root {
-        --big-font: 1.8rem;
-        --normal-font: 1.2rem;
-        --h2-font: 2rem;
-    }
-    
-    .logo {
-        font-size: 1.8rem;
+        --big-font: 1.5rem;
+        --normal-font: 1rem;
+        --h2-font: 1.8rem;
     }
     
     .main-container .image {
@@ -1503,10 +1418,7 @@ footer a i{
         width: 25px;
         height: 25px;
         font-size: 1.5rem;
-    }
-    
-    .technical-bars .progress-line {
-        width: 250px;
+        margin: 5px 10px;
     }
     
     .container11 .card {
@@ -1523,27 +1435,7 @@ footer a i{
     .fillter-button .bt1 {
         margin-left: 0.5rem;
         font-size: 0.7rem;
-    }
-    
-    .contant form {
-        padding: 0 20px;
-    }
-    
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    footer p {
-        margin-bottom: 10px;
-    }
-}
-
-/* For very small screens */
-@media (max-width: 400px) {
-    .main-container .image {
-        width: 200px;
-        height: 200px;
+        letter-spacing: 2px;
     }
     
     .typewriter {
@@ -1551,8 +1443,36 @@ footer a i{
         font-size: 1.5rem;
     }
     
-    .technical-bars .progress-line {
+    .about .img-about img {
+        max-width: 250px;
+    }
+    
+    .port-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .port-content p {
+        font-size: 0.7rem;
+    }
+}
+
+/* For very small screens (below 400px) */
+@media (max-width: 400px) {
+    .main-container .image {
         width: 200px;
+        height: 200px;
+    }
+    
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .content .typewriter {
+        font-size: 1.2rem;
+    }
+    
+    .content p {
+        font-size: 0.9rem;
     }
     
     .container11 {
@@ -1577,5 +1497,109 @@ footer a i{
     .service-icon {
         padding: 1rem;
         font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer p {
+        margin-bottom: 10px;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 884px) {
+    .nav-container .nav-item {
+        display: none;
+    }
+    
+    .hamburg, .cancel {
+        display: block;
+    }
+    
+    .dropdown.active {
+        transform: translateY(0);
+    }
+    
+    .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    .main-container {
+        margin-top: 120px;
+    }
+    
+    .main-container .image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    section {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .skills {
+        height: auto;
+    }
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait) {
+    .main-container {
+        flex-direction: row;
+    }
+    
+    .main-container .content {
+        width: 50%;
+    }
+    
+    .main-container .image {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .logo span {
+        text-shadow: 0 0 15px #077b32;
+    }
+    
+    .content h1 span, .content .typewriter-text {
+        text-shadow: 0 0 15px #077b32;
+    }
+    
+    .service-icon {
+        box-shadow: 0 0 30px white;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .navbar, footer, .social-links, .btn {
+        display: none;
+    }
+    
+    .main-container .image {
+        box-shadow: none;
     }
 }
