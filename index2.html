@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK | Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">SMK</span>
+                <div class="logo-circle"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://wa.me/03103029564" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/syed-konain-110" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/syed-taqi-5a99972a0" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <div class="text-content">
+                <h4>HELLO!</h4>
+                <h1>I'm Syed Muhammad Konain</h1>
+                <h3 class="typewriter">I Am A <span id="typed-text"></span></h3>
+                <p>A passionate frontend developer with 1+ years of experience creating beautiful, functional websites. I've completed 70+ projects, each one helping me refine my skills and deliver better solutions for my clients.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Hire Me</a>
+                </div>
+            </div>
+            <div class="image-content">
+                <div class="profile-image">
+                    <img src="WhatsApp_Image_2025-07-24_at_5.19.42_PM-removebg-preview.png" alt="Syed Muhammad Konain">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-header">
+            <h2>My <span>Skills</span></h2>
+            <p>Technologies I work with</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML</h3>
+                <p>Semantic markup, accessibility, SEO optimization</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>CSS</h3>
+                <p>Responsive design, animations, modern layouts</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fab fa-js"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>ES6+, DOM manipulation, async programming</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>MySQL</h3>
+                <p>Database design, queries, optimization</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>C</h3>
+                <p>Algorithms, data structures, system programming</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <h2>My <span>Services</span></h2>
+            <p>What I offer to my clients</p>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Website Design</h3>
+                <p>Beautiful, modern designs tailored to your brand with a focus on user experience and conversion.</p>
+                <div class="service-overlay">
+                    <h3>Website Design</h3>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Responsive Layouts</li>
+                        <li>Brand Identity</li>
+                        <li>Wireframing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Website Development</h3>
+                <p>Clean, efficient code that brings designs to life with functionality and performance in mind.</p>
+                <div class="service-overlay">
+                    <h3>Website Development</h3>
+                    <ul>
+                        <li>Frontend Development</li>
+                        <li>Performance Optimization</li>
+                        <li>Cross-browser Testing</li>
+                        <li>SEO Friendly</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Portfolio Integration</h3>
+                <p>Showcase your work professionally with a portfolio that highlights your skills and projects.</p>
+                <div class="service-overlay">
+                    <h3>Portfolio Integration</h3>
+                    <ul>
+                        <li>Project Showcase</li>
+                        <li>Testimonials</li>
+                        <li>Contact Integration</li>
+                        <li>Social Media Links</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>Personal Branding</h3>
+                <p>Build your online presence with a personal website that reflects your professional identity.</p>
+                <div class="service-overlay">
+                    <h3>Personal Branding</h3>
+                    <ul>
+                        <li>About Page</li>
+                        <li>Skills Showcase</li>
+                        <li>Resume Integration</li>
+                        <li>Blog Setup</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Website Maintenance</h3>
+                <p>Keep your website running smoothly with regular updates, backups, and technical support.</p>
+                <div class="service-overlay">
+                    <h3>Website Maintenance</h3>
+                    <ul>
+                        <li>Bug Fixes</li>
+                        <li>Content Updates</li>
+                        <li>Security Patches</li>
+                        <li>Performance Tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="WhatsApp_Image_2025-07-24_at_5.39.47_PM-removebg-preview.png" alt="About Syed Muhammad Konain">
+                <div class="image-border"></div>
+            </div>
+            <div class="about-content">
+                <div class="section-header">
+                    <h2>About <span>Me</span></h2>
+                    <p>Who I am and what I do</p>
+                </div>
+                <p>I'm Syed Muhammad Konain, a passionate frontend developer with a love for creating beautiful, functional websites. My journey in web development began 1+ years ago, and since then I've completed over 70 projects, each one helping me grow and refine my skills.</p>
+                <p>What drives me in this field is the ability to bring ideas to life through code. I find immense satisfaction in solving problems and creating digital experiences that are not only visually appealing but also intuitive and user-friendly.</p>
+                <p>My approach to development is centered around clean code, responsive design, and performance optimization. I believe that a great website should work seamlessly across all devices and load quickly to provide the best user experience.</p>
+                <p>When I'm not coding, you can find me learning new technologies, contributing to open-source projects, or sharing my knowledge with others in the developer community. I'm constantly pushing myself to learn and improve because in this fast-evolving industry, staying updated is key.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>70+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-header">
+            <h2>My <span>Projects</span></h2>
+            <p>Some of my recent work</p>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="e-commerce.png" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <h3>E-commerce Website</h3>
+                    <p>A fully responsive online store with product filtering and cart functionality.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="index.html" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="portfolio.png" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>A modern portfolio site with smooth animations and contact form.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="index3.html" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="bottle.png" alt="Project 3">
+                </div>
+                <div class="project-content">
+                    <h3>Bottle Animation</h3>
+                    <p>A content management system for bloggers with rich text editing.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="index4.html" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="animation.png" alt="Project 4">
+                </div>
+                <div class="project-content">
+                    <h3>Animation Website</h3>
+                    <p>Real-time Animation with simple coding </p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="index5.html" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="slider.png" alt="Project 5">
+                </div>
+                <div class="project-content">
+                    <h3>Slider Animation</h3>
+                    <p>A productivity app for organizing tasks with drag-and-drop functionality.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="index6.html" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="can.png" alt="Project 6">
+                </div>
+                <div class="project-content">
+                    <h3>Can Animations</h3>
+                    <p>An elegant website for a restaurant with menu and reservation system.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="index7.html" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#" class="btn">View All Projects</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Get In <span>Touch</span></h2>
+            <p>Let's work together</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>taqis4817@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Phone</h3>
+                        <p>+92-3103029564</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Location</h3>
+                        <p>Karachi, Pakistan</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/03103029564" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/syed-konain-110" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/syed-taqi-5a99972a0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button  type="submit" class="btn"><a href="taqis4817@gmail.com">Send Message</a></button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div class="logo">
+                    <span class="logo-text">SMK</span>
+                    <div class="logo-circle"></div>
+                </div>
+                <p>Frontend Developer & Web Designer</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Website Design</a></li>
+                    <li><a href="#services">Website Development</a></li>
+                    <li><a href="#services">Portfolio Integration</a></li>
+                    <li><a href="#services">Personal Branding</a></li>
+                    <li><a href="#services">Website Maintenance</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> taqis4817@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +92-3103029564</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Syed Muhammad Konain. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script2.js"></script>
+</body>
+</html>
