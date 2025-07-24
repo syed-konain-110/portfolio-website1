@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Modern E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html">Nexus</a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#featured">Products</a></li>
+                        <li><a href="#testimonials">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#account">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon">
+                    <a href="#cart"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                </div>
+                <div class="menu-icon" onclick="menutoggle()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <!-- Hero Section -->
+            <div class="row">
+                <div class="col-2">
+                    <h1>Elevate Your Style <br> With Premium Quality</h1>
+                    <p>Discover curated collections that blend timeless elegance with contemporary design.</p>
+                    <a href="#featured" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Fashion Model">
+                        <div class="circle"></div>
+                        <div class="circle-small"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Men's Fashion">
+                    <div class="overlay">
+                        <h3>Men's Collection</h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="Women's Fashion">
+                    <div class="overlay">
+                        <h3>Women's Collection</h3>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1366&q=80" alt="Accessories">
+                    <div class="overlay">
+                        <h3>Accessories</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="small-container" id="featured">
+        <h2 class="title">Featured Products</h2>
+        <div class="row product-row">
+            <!-- Products will be loaded via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Offer Banner -->
+    <section class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&auto=format&fit=crop&w=1025&q=80" class="offer-img" alt="Special Offer">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on Nexus</p>
+                    <h2>Smart Band 4 Pro</h2>
+                    <small>The Smart Band 4 Pro features a 39.9% larger (than Smart Band 4) AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small>
+                    <a href="#" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="small-container">
+            <h2 class="title">Customer Reviews</h2>
+            <div class="row">
+                <div class="col-3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I absolutely love my purchase! The quality exceeded my expectations and the shipping was incredibly fast. Will definitely shop here again.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <img src="OIP (1).jpg" alt="Customer">
+                    <h3>Sarah Johnson</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>The customer service is outstanding. They helped me find exactly what I was looking for and even offered styling advice. 10/10 experience!</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <img src="OIP.jpg" alt="Customer">
+                    <h3>Michael Chen</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fas fa-quote-left"></i>
+                    <p>I've ordered multiple items from Nexus and each one has been perfect. Their attention to detail and quality control is impressive.</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Customer">
+                    <h3>Emma Rodriguez</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="nike.jpg" alt="Brand Logo">
+                </div>
+                <div class="col-5">
+                    <img src="chanel.jpg" alt="Brand Logo">
+                </div>
+                <div class="col-5">
+                    <img src="dior.jpg" alt="Brand Logo">
+                </div>
+                <div class="col-5">
+                    <img src="zara.jpg" alt="Brand Logo">
+                </div>
+                <div class="col-5">
+                    <img src="jordan.jpg" alt="Brand Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and iOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="nexux.jpg" alt="Play Store">
+                        <img src="nex.jpg" alt="App Store">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <div class="logo">
+                        <a href="index.html">Nexus</a>
+                    </div>
+                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Premium Products Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 - Nexus (Portfolio Project)</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-product-details">
+                <div class="modal-col-1">
+                    <img id="modalProductImage" src="" alt="Product Image">
+                </div>
+                <div class="modal-col-2">
+                    <h2 id="modalProductName"></h2>
+                    <div class="rating" id="modalProductRating"></div>
+                    <h3 id="modalProductPrice"></h3>
+                    <select id="modalProductSize">
+                        <option>Select Size</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <input type="number" id="modalProductQty" value="1" min="1">
+                    <button class="btn" id="addToCartBtn">Add to Cart</button>
+                    <h3>Product Details <i class="fas fa-indent"></i></h3>
+                    <p id="modalProductDetails"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be loaded via JavaScript -->
+        </div>
+        <div class="cart-total">
+            <h4>Total: <span id="cartTotalPrice">$0.00</span></h4>
+            <button class="btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
