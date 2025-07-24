@@ -116,3 +116,14 @@ canvas {
     color: #fff;
     border: none;
 }
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 20px;
+    }
